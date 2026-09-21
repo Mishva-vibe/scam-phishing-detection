@@ -17,9 +17,11 @@ if len(url) > 75:
 if url.count(".") > 3:
     score += 1
 
-print("Phishing Score:", score)
+percentage = (score / 5) * 100
 
-if score >= 3:
+print("Phishing Risk:", percentage, "%")
+
+if percentage >= 60:
     print("Warning: URL may be suspicious")
 else:
     print("URL looks normal")
