@@ -1,3 +1,5 @@
+import re
+
 url = input("Enter URL: ")
 
 score = 0
@@ -17,7 +19,10 @@ if len(url) > 75:
 if url.count(".") > 3:
     score += 1
 
-percentage = (score / 5) * 100
+if re.search(r"https?://\d+\.\d+\.\d+\.\d+", url):
+    score += 1
+
+percentage = (score / 6) * 100
 
 print("Phishing Risk:", percentage, "%")
 
