@@ -30,3 +30,5 @@ if percentage >= 60:
     print("Warning: URL may be suspicious")
 else:
     print("URL looks normal")
+
+/// 
