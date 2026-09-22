@@ -31,4 +31,3 @@ if percentage >= 60:
 else:
     print("URL looks normal")
 
-/// 
