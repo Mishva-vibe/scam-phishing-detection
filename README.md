@@ -48,3 +48,4 @@ scam-phishing-detection/
 │   └── index.html
 └── static/
     └── style.css
+
