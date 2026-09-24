@@ -39,3 +39,8 @@ The system checks for:
 - IP addresses used instead of domain names
 
 ## 📂 Project Structure
+
+```text
+scam-phishing-detection/
+├── main.py
+├── README.md
