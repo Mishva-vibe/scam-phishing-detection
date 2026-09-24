@@ -38,3 +38,4 @@ The system checks for:
 - Too many dots in the URL
 - IP addresses used instead of domain names
 
+## 📂 Project Structure
