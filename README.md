@@ -44,3 +44,7 @@ The system checks for:
 scam-phishing-detection/
 ├── main.py
 ├── README.md
+├── templates/
+│   └── index.html
+└── static/
+    └── style.css
