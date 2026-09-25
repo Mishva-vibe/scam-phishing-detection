@@ -1,5 +1,4 @@
 # Scam / Phishing Detection
-#
 
 ## 📌 About the Project
 
