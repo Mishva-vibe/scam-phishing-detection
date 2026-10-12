@@ -1,14 +1,18 @@
-# Scam / Phishing Detection
+# 🛡️ Scam & Phishing URL Detection
 
-## 📌 About the Project
+A beginner-friendly web application that checks URLs for suspicious patterns and estimates their phishing risk.
 
-This project is a URL-based Scam/Phishing Detection system.
+## 🌐 Live Website
 
-It checks a given URL using different suspicious URL features and calculates a phishing risk score.
+[Click here to try the Phishing URL Detector](https://scam-phishing-detection-13y0.onrender.com/)
 
-## 🎯 Objective
+## ✨ Features
 
-The main objective of this project is to help identify potentially suspicious URLs and warn users before visiting them.
+- Check a URL for suspicious patterns.
+- Calculate an estimated risk score from 0% to 100%.
+- Display Low Risk, Suspicious, or High Risk results.
+- Detect patterns such as `@` symbols, suspicious keywords, long URLs, multiple dots, and IP-based URLs.
+- Simple web interface built with HTML and CSS.
 
 ## 🛠️ Technologies Used
 
@@ -16,35 +20,42 @@ The main objective of this project is to help identify potentially suspicious UR
 - Flask
 - HTML
 - CSS
+- Regular Expressions
 - GitHub
-- Kali Linux
+- Render
 
-## 🔍 How It Works
+## ⚙️ How It Works
 
-1. User enters a URL.
-2. The system checks different URL characteristics.
-3. A risk score is calculated.
-4. The website displays the phishing risk percentage.
-5. If the risk is high, a warning is displayed.
+1. Enter a URL in the input field.
+2. The application checks the URL for predefined suspicious patterns.
+3. Each matching pattern contributes to a risk score.
+4. The application displays an estimated risk level.
 
-## ⚙️ Detection Features
+## 🚀 Run Locally
 
-The system checks for:
+1. Clone the repository:
 
-- `@` symbol in the URL
-- Missing HTTPS
-- Suspicious words such as login, verify, account, bank, and password
-- Very long URLs
-- Too many dots in the URL
-- IP addresses used instead of domain names
+   `git clone https://github.com/Mishva-vibe/scam-phishing-detection.git`
 
-## 📂 Project Structure
+2. Open the project folder:
 
-```text
-scam-phishing-detection/
-├── main.py
-├── README.md
-├── templates/
-│   └── index.html
-└── static/
-    └── style.css
+   `cd scam-phishing-detection`
+
+3. Install the dependencies:
+
+   `pip install -r requirements.txt`
+
+4. Start the application:
+
+   `python main.py`
+
+5. Open `http://127.0.0.1:5000/` in your browser.
+
+## ⚠️ Disclaimer
+
+This project uses basic rule-based checks for educational purposes. It cannot guarantee that a URL is safe or malicious. Always verify suspicious links through trusted sources.
+
+## 👩‍💻 Project Goal
+
+To learn Python, web development, and basic cybersecurity concepts through a practical phishing URL detection project.
+
