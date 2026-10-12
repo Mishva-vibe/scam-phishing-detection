@@ -1,22 +1,41 @@
+
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 100px;
+    margin: 0;
+    padding: 50px 16px;
     background-color: #e8f0fe;
+    color: #333;
+}
+
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #1a237e;
-    font-size: 40px;
+    font-size: 36px;
 }
 
 p {
-    font-size: 18px;
-    color: #333;
+    font-size: 17px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+    margin: 25px 0;
 }
 
 input {
-    width: 300px;
+    flex: 1;
+    min-width: 0;
     padding: 12px;
     font-size: 16px;
     border: 2px solid #3949ab;
@@ -24,14 +43,13 @@ input {
 }
 
 button {
-    padding: 12px 25px;
+    padding: 12px 20px;
     font-size: 16px;
     background-color: #3949ab;
     color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    margin-left: 10px;
 }
 
 button:hover {
@@ -42,3 +60,77 @@ button:active {
     background-color: #1a237e;
 }
 
+.result {
+    margin-top: 25px;
+    padding: 22px;
+    border: 2px solid;
+    border-radius: 12px;
+}
+
+.result h2 {
+    font-size: 25px;
+    margin-top: 0;
+}
+
+.percentage {
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.safe {
+    color: #166534;
+    background-color: #dcfce7;
+    border-color: #22c55e;
+}
+
+.warning {
+    color: #92400e;
+    background-color: #fef3c7;
+    border-color: #f59e0b;
+}
+
+.danger {
+    color: #991b1b;
+    background-color: #fee2e2;
+    border-color: #ef4444;
+}
+
+.progress {
+    height: 12px;
+    background-color: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: 18px 0;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: currentColor;
+    border-radius: 20px;
+    transition: width 0.4s ease;
+}
+
+.checked-url {
+    overflow-wrap: anywhere;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    button {
+        margin: 0;
+    }
+}
