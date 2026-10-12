@@ -1,19 +1,55 @@
-<html>
+```html
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phishing URL Detector</title>
-    <link rel="stylesheet" href="style.css">
 
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
+    <div class="container">
+        <h1>🛡️ Phishing URL Detector</h1>
+        <p>Enter a URL to check its phishing risk.</p>
 
-    <h1>Phishing URL Detector</h1>
+        <form method="POST">
+            <input
+                type="text"
+                name="url"
+                placeholder="https://example.com"
+                value="{{ url }}"
+                required
+            >
+            <button type="submit">Check URL</button>
+        </form>
 
-    <p>Enter a URL to check:</p>
+        {% if score is not none %}
+        <div class="result {{ risk_class }}">
+            <h2>{{ risk_level }}</h2>
+            <p class="percentage">{{ score }}% Risk</p>
 
-    <input type="text" placeholder="Enter URL here">
+            <div class="progress">
+                <div class="progress-bar"
+                     style="width: {{ score }}%;">
+                </div>
+            </div>
 
-    <button>Check URL</button>
+            {% if risk_class == "safe" %}
+                <p>🟢 Low risk based on our checks.</p>
+            {% elif risk_class == "warning" %}
+                <p>🟠 Caution! Some suspicious signs were found.</p>
+            {% else %}
+                <p>🔴 High risk! Avoid opening this URL until verified.</p>
+            {% endif %}
 
+            <p class="checked-url">
+                <strong>Checked URL:</strong> {{ url }}
+            </p>
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>
+```
